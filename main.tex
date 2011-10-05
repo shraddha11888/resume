@@ -1,189 +1,81 @@
-\documentclass{resume}
+\documentclass[margin]{res} 
+% the margin option causes section titles to appear to the left of body text 
+\usepackage{verbatim}
 
-\renewcommand{\categoryfont}{\sc}
+\sectionwidth=1in
+\linespread{1.02}
 
-%
-% set the space used for category titles here:
-% use the same value for oddsidemargin and marginparwidth [the latter 
-% 		will be reset to account for marginparsep]
-% 
-\setlength{\oddsidemargin}{1in}
-\setlength{\marginparwidth}{1in}
-% 
-% calculate other dimensions [textwidth and evensidemargin] 
-% in function of oddsidemargin and marginparwidth: 
-% would be nicer to put in the class file...
-%
-\addtolength{\marginparwidth}{-\marginparsep}
- \setlength{\evensidemargin}{\oddsidemargin}
- \setlength{\textwidth}{\paperwidth}
- \addtolength{\textwidth}{-2in}
- \addtolength{\textwidth}{-2\oddsidemargin}
- \addtolength{\textwidth}{\marginparwidth}
- \addtolength{\textwidth}{\marginparsep}
-%
-%
-\setlength{\topmargin}{-0.5in}
-%
-%
-\renewcommand{\labelcitem}{$\diamond$}
-\renewcommand{\labelitemi}{$\cdot$}
-\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
-\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
-\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
-
-\author{Mikl\'os Cs\H{u}r\"os}
-% ------ Address --------------------------------------------------------
-
-\address{Yale University\\
-	Department of Computer Science\\
-	P.O. Box 208285 Yale Station\\
-	New Haven, CT 06520-8285\\
-	(203) 432-1238\\
-	\mbox{\small\tt csuros-miklos@cs.yale.edu}\\
-	\mbox{\small\tt http://www.cs.yale.edu/homes/csuros-miklos/}}{
-	86 Prospect Street\\
-	New Haven, CT 06511\\
-	(203) 865-2145}
-
-\def\tub{Technical University of Budapest}
-\def\TUB {\tub}
-\def\facty{Faculty of Electrical Engineering}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
 
 \begin{document}
-\maketitle
 
-% ------- Education ---------------------------------------------------
+\name{Shraddha Sridhar\\[8pt]} % the \\[12pt] adds a blank line after name
 
-\begin{category}{Education}
-\citem{Yale University}, New Haven, CT.\\
-Ph.D. in Computer Science, expected graduation: 1999.\\
-M.Phil. in Computer Science, expected May 1997.\\
-Master's project: {\em Learning Variable Length Markov Chains from Noisy Output.}
-\citem{\tub}, Hungary. \\
-Diploma [M.Sc.] in Electrical Engineering, July 1994.\\
-Thesis title: {\em Fast Algorithms in Computational Learning Theory.}
-\citem{Technical University of Vienna}, Austria.\\
-Spring 1993. Coursework in Computer Science, Marketing and Mathematics.
-\citem{Compi\`egne University of Technology},
-France.\\
-Fall 1991. Coursework in Computer Science and Mathematics.
-\citem{Scholarships}
+\address{ \textit{email}: ssridh14@asu.edu\\ \textit{phone}:  +1 (480) 327-7224}
+
+\begin{resume} 
+
+\section{Objective}
+To consolidate and effectively apply my skill set to real world challenges in Electronic Circuit Design
+
+\section{Education}
+{\bf M.S. in Electrical Engineering, Arizona State University} \hfill  May 2012\\
+GPA: 3.55 / 4\\
+\textit{Courses}: VLSI Design, Advanced VLSI Design, Advanced Analog Integrated Circuits, MEMS, Analog Integrated Digital Systems and Circuits, Semiconductor Device Theory, Design of Engg. Experiments\\
+
+\vspace{-0.2in}
+{\bf Bachelor of Engineering, Electronics and Communications}  \hfill June 2010\\
+First class (66\%), Mumbai University, India\\
+\textit{Courses}: Computer Architecture, Digital Signal Processing, Elements of Microprocessors, Electronic Instrumentation, Microcontrollers and Embedded Programming, Digital Communication, Microwave Devices and Circuits, Computer Communication Networks
+
+\section{Experience}
+{\bf Research Assistant} \hfill May 2011 - present\\
+{\bf Prof. Lawrence Clark, ASU}
 \begin{itemize}
-\item Yale Fellowship (September 1994 -- present)
-\item European Community (TEMPUS) Scholarship (Summer -- Fall 1991)
-\item Scholarship of the {\tub} (Spring 1993)
-\item Scholarship of the {\facty} of the {\tub} (Spring 1993 \& 1994)
+	\item Master’s thesis: Design of an automated validation environment for the validation of a Radiation Hardened MIPS-4k based processor. Involves writing Perl scripts to generate random tests, provide test inputs to the RTL model from OVP (a MIPS Emulator) and for comparing the results from the emulator and RTL for the functional verification of the RTL model. Also implementing directed tests using VMIPS emulator for corner cases.	
+	\item Microprocessor Cache Design: Currently designing a Radiation Hardened Microprocessor write through cache for a 45 nm SOI process. Circuit Simulation using Cadence IC and HSPice, Timing Analysis using Nanotime, a Synopsys tool and layout using Calibre.
+\end{itemize} 
+
+{\bf Research Assistant} \hfill Jan 2011 - May 2011\\
+{\bf Prof. Michael Goryll, ASU}
+\begin{itemize}
+	\item Implemented a transimpedance amplifier on an AMI process for measuring currents through single ion channels of cells, soon to be sent for tape out.
 \end{itemize}
-\end{category}
-
-% --------- Research ----------------------------------------------------
-
-\begin{category}{Research interests}
-\citemnobullet Machine learning, statistical pattern recognition, 
-data compression. 
-Applications to natural language processing, molecular biology, image recognition.
-\end{category}
-
-\begin{category}{Research projects}
-\citembullet Current research in computational learning theory. 
-Advisor: Dana Angluin.\\
-Probabilistic Finite Automata, Hidden Markov Models.
-
-\citembullet
-Research project: descriptive decision models in
-economics at the Technical University of Vienna. (Attributed~\second
-prize at the Fall Student Conference of the \TUB.) (Spring -- Fall 1993)
-
-\citembullet
-Team research project: comparison of adaptive control
-methods including fuzzy systems, neural networks and methods based on 
-statistical decision theory. Design and implementation of 
-a C/IBM PC program to 
-simulate the driving of a truck. (Won~\third prize at the Spring National 
-Student Conference, and the award of the Hungarian Scientific Society 
-for Telecommunications.)
-(Fall 1992 -- Spring 1993)
-
-\citembullet
-Research project: theory and application of binary 
-decision trees in pattern recognition. (Awarded~\second prize at the
-University Student Conference.) (Fall 1992)
-\end{category}
-
-% -------- Publication --------------------------------------------
-
-\begin{category}{Publication}
-\citemnobullet Learning Markov chains with variable memory 
-lengths from noisy output. (with Dana Angluin) {\it submitted to COLT'97.}
-(Extended abstract available as {\tt http://www.cs.yale.edu/\\homes/csuros-miklos/colt97abs.ps}).
-\end{category}
-
-\newpage
-% ------- Skills ------------------------------------------------------
-
-\begin{category}{Skills}
-\citembullet C, FORTRAN, HTML, Lisp/Scheme, CA-Clipper/DBASE, 
-	Intel x86, Pascal
-\citembullet perl, csh, Tcl/Tk, awk
-\citembullet CDE, AIX, Unix, MS-DOS, MS-Windows, OpenWindows, CTOS, VMS, 
-	Novell
-\citembullet Fluent spoken/written English, French, German, and Hungarian; fair Spanish,
-Polish
-\end{category}
-
-% -------- Work experience --------------------------------------------
-
-\begin{category}{Work \\experience}
-\citem{Teaching Assistant}, Yale University (January 1995 -- present)\\ 
-Courses: Theoretical Methods in Computer Science, Algorithms, 
-Introduction to Computer Science, Cryptography and Network Security, 
-Theory of Dictributed Systems
-\citem{Programmer}, Department of Bioinformatics, 
-CuraGen Corp., Branford, CT\\ (Summer 1996)
+ 
+{\bf Project Trainee} \hfill July 2009 - May 2010\\
+{\bf Bhabha Atomic Research Center (BARC), India}
 \begin{itemize} 
-\item Designed and implemented optimizing peak fitting program 
-to process electrophoresis data.
-\item Designed and implemented multiple band matching algorithm 
-to compare gene expression levels.
-\item Wrote Prolog-Oracle interface in C/Pro*C to increase the speed of
-gene data analysis.
+	\item Designed a Digital Comb FIR filter and implemented it on a custom designed FPGA system. Simulations were done on MATLAB to condition transducer signals at 25 Hz having all odd harmonics till 5KHz. SNR was improved by a factor of 3. Novel techniques include the use of 2048 coefficients for band pass filter using Kaiser window and DMA for the external RAM memory of the FPGA.
+\end{itemize} 
+
+{\bf Internship, Electronics Overhaul Division} \hfill May 2008 - July 2008\\
+\begin{itemize} 
+	\item Worked on test-benches and Overhauled a milieu of electronic instruments used on civil aviation aircrafts like Radar Equipment, cockpit voice recorder, Digital Passenger Controlling Unit and headsets.
+	
+	This can be ditched I guess
 \end{itemize}
 
-\citem{Technical Writer}, Sysland Ltd., 
-a partner of UNISYS Corp., Hungary (October 1993 -- June 1994)\\
-Designed and co-authored textbook and course materials for OTP Bank 
---- the largest Hungarian bank ---
-(materials used in the instruction of all the tellers on the
-software/hardware solution delivered by Unisys).
-\citem{Internship}, Zaragoza University, Spain (Summer 1993)
+\section{Teaching}
+blah blah
+\section{Publications}
+‘Real time locating Systems using RFID-Radar’ at the ‘National Conference on Innovations in Electronics and Information Technology, 2009 (cite properly)
+
+\section{Projects}
 \begin{itemize}
-\item Installed and maintained Oracle in IBM PC environment.
-\item Designed SQL exercises for database course.
-\end{itemize}
+\item
+{\bf Digital}: Designed 3:8 decoder including layout and optimized the average energy delay product. Implemented 8-bit FIR filter including layout and optimizing the design for minimum EDP.
+Analog projects: Designed and optimized 50 ohm driver amplifier, folded cascode opamp and different current mirrors and beta multiplier circuits. Optimized CMOS switches for low noise
+\item{\bf MEMS}: Implemented a MEMS based capacitive microphone array for improved directionality and sensitivity. Simulated the array using COMSOL and created a layout for the array using LEdit. Created a complete process flow for the design.\end{itemize}
 
-\citem{Research Assistant}, Department of Mathematics and Computer Science,\\
-{\TUB} (Summer 1992)\\
-Assisted in the writing of a textbook on statistical pattern recognition.\\
-{\em(L. Devroye, L. Gy\"orfi, G. Lugosi: Probabilistic Theory of Pattern
-Recognition, Springer-Verlag NY, 1996.)}
+I left out the irrelevant stats project, write something else in its place
 
-\citem{Freelance programmer} (1990 -- 1994)\\ 
-Designed and developed CA-Clipper 
-programs for complex database management tasks. The clients were
-usually small/medium-size businesses ranging from retail stores to nationwide
-distributors of medical products.
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+\section{Computer \\ Skills}
+   \begin{tabular}{l p{3.5in}}
+     	{\bf Software} &  Cadence IC, Diva Tools, HSpice, Spectre, Calibre, Xilinx ISE, COMSOL, LEdit, Matlab, Eagle \\\\
+	{\bf Languages} & C++, Pearl, VHDL, bash
+ \end{tabular}
 
-\citem{Translator}, T\'oth Translation Agency, Budapest, Hungary 
-(1992 -- 1995)\\
-Translated technical texts mostly in the field of Electrical Engineering from 
-English or German into Hungarian and from Hungarian into English.
-\end{category}
-
-% -------- Reference --------------------------------------------
-
-\begin{category}{Reference} 
-\citemnobullet Available on request.
-\end{category}
-
-\end{document}
+\end{resume} 
+\end{document} 

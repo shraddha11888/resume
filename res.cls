@@ -280,8 +280,8 @@
 \newskip\sectionskip
 \newdimen\resumewidth
 
-\resumewidth=6.5in
-\sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
+\resumewidth=6.8in
+\sectionskip=2.5ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
 		     \sectionwidth=#1
@@ -440,9 +440,9 @@
 %    the text next to it
 %
 \let\@@section\relax
-\def\ds@overlapped{\ifx\@@section\relax\newsectionwidth{0.5in}\let
+\def\ds@overlapped{\ifx\@@section\relax\newsectionwidth{0.6in}\let
   \@@section\unboxed@sectiontitle\fi}
-\def\ds@margin{\ifx\@@section\relax\newsectionwidth{1.3in}\let
+\def\ds@margin{\ifx\@@section\relax\newsectionwidth{0.6in}\let
   \@@section\boxed@sectiontitle\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -772,10 +772,9 @@
 % with everything in the left of its column
 
 \@secpenalty = -500
-\topmargin 0pt
-\headheight 0pt
+\headheight 0in
 \headsep 0pt
-\textheight 9in
+\textheight 9.5in
 \parindent 0pt
 \topmargin 0in
 \oddsidemargin 0pt
